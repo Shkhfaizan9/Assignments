@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>form</title>
+<style>
+#parent{
+    height : 450px;
+    width: 250px;
+    border: 4px solid rgb(61, 36, 36);
+    margin : auto;
+    padding: auto;
+    border-radius: 10px;
+    background-color: rgb(169, 142, 212);
+}
+#textbox {
+    height: 100px;
+    width: 200px;
+    font-size: 14pt;
+}
+#radio{
+    
+}
+#email{
+    margin-top :10px;
+    height: 30px;
+    
+}
+.dropdown{
+    color : red;
+    width : auto
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+ <div id ="parent">
+
+    <div >
+        <label style= "color:green"><b>Feedback type</b></label>
+    <select class = "dropdown">
+        <ul>
+    <option> form 1</option>
+    <option> form 2</option>
+    <option> form 3</option>
+        </select>
+    </div>
+
+
+
+    <p> User Message</p>
+<input id="textbox" type="text" placeholder="write here" />
+<div id = "child1">
+
+    <label for="rating1"> 1 Star</label>
+    <input type="radio" id="rating1" />
+
+    <label > 2 Star</label>
+    <input type="radio" id="rating2" />
+
+    <label > 3 Star</label>
+    <input type="radio" id="rating2" />
+
+  <div>
+    <label > Age</label>
+    <input type="number" placeholder="Number" min="10" max="100"/>
+</div>
+    
+
+<div id="email">
+    
+    <label>Email</label>
+    <input type="email"  placeholder="email" required/>
+    </div>
+
+
+
+    <label>Password<label>
+    <input type="password"  placeholder="password" required min="8" />
+</div>
+    <p>Optional Website Url</p>
+    <input type="URL" placeholder="Enter Url"/>
+
+    <div>
+        <input type="checkbox" />
+        <label> Terms and Condition</label>
+
+</div>
+<div>
+    
+<button> Submit</button>
+</div>
+
+</div>
+
+ </div> 
+
+</body>
+</html>

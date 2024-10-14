@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Mi Store</title>
+      <style> 
+
+         .navbar{
+
+            display: flex;
+            justify-content: space-between;
+            border: solid 0px red;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin-bottom: 3px;
+         }
+         .navleft{
+            display: flex;
+            gap : 20px
+         }
+         .navright{
+            display: flex;
+            gap : 20px
+         }
+         .body{
+              height: 235px;
+              width:980px;
+              border: solid 0px red;
+           
+             display : flex;
+             margin: auto;
+             gap: 20px
+         }
+         .box2{
+            height: 100px;
+              width:980px;
+              border: solid 0px red;
+           
+             display : flex;
+             margin: auto;
+             margin-top: 10px;
+             margin-bottom: 10px;
+
+             
+
+         }
+         .card{
+            height: 230px;
+              width:230px;
+              border: solid 0px red;
+              /* background-color: rgb(247, 247, 247); */
+              box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+             
+             
+
+         }
+        
+
+         .insidecard{
+            height: 175px;
+              width:175px;
+              border: solid 0px red;
+              margin: auto;
+              margin-top: 20px;
+              
+             
+
+         }
+         .lastbox{
+            height: 100px;
+              width:100px;
+              border: solid 0px red;
+              margin: auto;
+              
+              margin-left: 30px;
+
+
+         }
+         .final{
+            display:flex;
+         }
+         button {
+            background-color: rgb(245, 224, 184);
+            color: rgb(255, 123, 0);
+            border: solid 1px rgb(255, 123, 0);
+            border-radius: 4px;
+            font-weight: bolder;
+         }
+         
+
+      </style>
+</head>
+<body>
+  
+       <div class="navbar">
+           <div class="navleft">
+                <div>
+                        <img style="margin-top:12px"   height="25px"; width="35px"  src="data:image/png;base64,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"/> 
+                </div>
+             <p style="color:rgb(255, 105, 50)">Store</p>
+             <p> Phone</p>
+              <p>TV & Smart Home</p>
+             <p>Tablet</p>
+             <p> LifeStyle</p>
+           </div>
+           <div class="navright">
+                <p>Discover</p>
+                 <p> Support</p>
+                 <div>
+                    <img style="margin-top:12px"   height="25px"; width="25px"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAjVBMVEX///8nJyclJSX8/PwpKSkAAAAiIiIWFhYbGxsdHR35+fkUFBQcHBwZGRkQEBD19fXg4ODIyMg5OTns7OwICAhoaGjNzc3l5eW/v7/Y2NhDQ0PKysrv7+9UVFSvr6+jo6OKioo8PDxZWVm0tLQxMTGSkpJfX196enpwcHBHR0ednZ14eHhra2uGhoZNTU0QPu5eAAAIb0lEQVR4nO2ciXbaSgxA7dm8wWCDwTb7YggkKf//eU8aQxbSvmDjlKFHt21OCoYjIY02z+A4BEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQRGtw+Mv/8MS/Q/iuzrte3DzxT1ApFWbFKM/zZFIMqgf47037eIAavSxf7sal8qMo8jqqHO+2kyz8ZyzoxM87kepAMdd1BfxxmfJ1Wg7ng3tLdhvgguiEg81K6sB1jXYIE9XvIpBynfdOF99V1KbgMustDp4SQhidjG5CMFQPfwql/CPqiFc+3po0YWQ+lkyoSjGjJ/xg5hdQkIHGQslZgibkj2dGEDgeaga2Ko1OKvCiQPRXq77wPT9g1YKEpan0r8zkzHtLXBfubMouOiNoIZSW3nqbj4o4y+JitFkeUukpdFcGltTl6OEyB67AJ3BQhuqxIJ1tRxdXhMlynPrgrPC8YHJp8sbDKIlxo7fWVcxkfrCbDN5C64erppu1r3BdQgjSLz00Y/ggOoKY2dETJj0EelicHuOfL8F/k52JREC6m4Y8fBwrxmNlAonwjgn+/2sy4JXKYd7vmMjKggNY8WFqnOkxwCDiuvKpd7LepXH42Y7Zq3QxHoloGD5EyjBpfuah0K5SyTUiz7sKw42rhw+hIfIUoYuK7niE7vmN58EnkrumzHH189+R7yY4tAtzaYoWbxxfU6ug0WPNFJYGMv87Ut4EdwpTpDF1iI3432Vy8xGMSpP93VX8d6S8AZB21zVNBDMuek2lghclWB4It7v/eRFvZq4FFjJyAqmgRtyYa5M/wU9tDze9PtrP7T7VqsHAivvItBqz6c/J1g7PqWluj73w+yX4Ae4MVqZESOeWl6fZyrQS0cSp7W25xBrclDY/JFwrzCMMpP6+GjLV89OjwtdGuc0acqfExMZU3ETKUYCFXjC0tzgFpQqsMYX/2mjqwl87OMmJsvZFa48tlpiuvmx3ryTBleimi3ZlapXpTOEEbddrtpLCMa5Ef2jrOsT6EsoZMELDApo7Sw9Lt9Li0m1ukqGMm82VuDPpmkbR4vr71Db96W7aN3Bn2kc39batC9Ya0Nq7DCNp07pkjW/A1i2L1R5gAlhH0aKhfmD4ZWRmNm0L1hqFadU9nD01DIebFO9PydDWBiPxTfNbNHw5dsIpvoHMbB2B5x7OgPs3BPvYNxoWdloQfExjbzi+4b5nZm68yatGdPdgg3FCHW7R0NxXlEl7MrXLBr2UNdeQGw2FtRpy8FKcQ9zkpcpFDSeOpY0+Rhp2W6TxIOELib2JlRom1RyxabZwPmQLSynMdhJ/0vwd5hqHyam1Xf6gVBAo9Lz5O/yKcCWr9kRqFVg4xw4YsbNvvoag8mYisLby5s4eb/yqsvE7DLB7EpG13RPHDhhsIOOmNkwinOxHlqZDBII9rCPdeJS09HDMc0u6+VHAcNMD7s5Tu4Zj63ClcOq9szIVOtXkYqux6kprZ0Szsc3JJeZTafM00RlJnOl6L7UHNXjvmL/6UJYybW2+d85TfUho9af6IXdGSkBZGlg7LkU43pkBI/pPtaUEDdcdnIJ4Fs8SUaus7+J2RF1zJaJTJxKbQ7WytmQ7sUjREJ1Zr94wCVrDMX42It3Y2VW8wacl9j/C25rgcfXLuPOEudANZpbfIAUWkSuqnQo1VMQFDFW7KmXyZQ+jZYBWa99sGu3XWopJgHulRbC3/4ACBH1tjOgfB9cbI+4HkClcpn49wH5ojru+sE/0V5njfOOqZk8Rd2LZwf3uwlXyKTxVC9aqiato5wu8U+rNiv+3CK+2hTmTVVAdxhBCRKCi5Y6KZ4Bmvtk2pLrJN9KaqLIJ1PmMAqD3od1nL4xw2Tiojlf4y/8L/iZsZkutzJ42ZraFC6WHmcU+arbR4J4MN8C7udDNzv4npKKHjg66Og71fmbIm1nupg6KHh98UZ20kMP4k0n4+RL8Ueykqk4KVfpVdM8bN+8i/DXgnvtsrKuDTqJbPhWVUT5IjA+EyYsKqs2o7Hzgq8I/xpUPW6sjqtj7Jc1JCvC+rlwvinfPM2KHo+djGonTgb3ykw3Biv3C6rNQ1cHfcF76VYxkbuCp8X6Rx9lgkGVZnCyG4yDCAGPCSyA61fGvM5AYy+S0pO3k9OEXR4nRhpkdzsrT2hf98Xglujr1TZFmLMfkawHe+lFDqN2VP7LYSd9ZrLSq1pnAW5+n02pGB3wE4q1Kj9DyxiX292+HMM0VclslRrv15IPnvsZ6jJkDBycfxOWJGjOlvP58ymHZ5ql7ifDwLFRoc0hFuDOdH6QOxOkE8Nl+GIKU1uvNebEtootgAx9Jusuq97AZNEBYbGeu9rAxPgHOGWgx2xbnE0Mhd7b6ixGVXxbhA5yFQiV7xfxlpeUb6ep1XvROT1etBH/Rn9ahiws4KBtu5LwTg1GyAfLzNw5csPOZYBd2ZDqvTqXY7apf+a28013XvdRQXHk6zAI+fBvGnwTmg3EgLjWEnAm53/J4+sY3vTv0+mb35ScvBSOqzPKcWHHFZAKnwt6FmzKTF22u32qB7aI8F6sfkDfsDLALjJkLrNYvNOzM7i1ZS1Tt0kKqy3DD2A1bdGyiGi2GW/9LcaM395atHU7DRT78Ur9p22/X1AEq1HCI36fxvhiFiB4l618DFtrTsnMe25gxoyof/MuIPoF9Bi/67GxDnJ7LRzjFfj3Y2PN4FZxt6Ap/bf3J2Tqc+ojBUZ7Lti5uxnyEsq0mfOGbm8Iqndm8+6QpxmKjfdmNOv3n3zeTD46pbrgzSPJR71900HPuv7cUP8nbQJ/XP/ROEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBEARBvPEfQfpXe3WaI/4AAAAASUVORK5CYII="/> 
+                </div>
+                <div>
+                    <img style="margin-top:12px"   height="25px"; width="25px"  src="data:image/png;base64,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"/> 
+                </div>
+                <div>
+                    <img style="margin-top:12px"   height="25px"; width="25px"  src="https://as1.ftcdn.net/v2/jpg/02/89/49/22/1000_F_289492257_augSIlCtit7AQhCZQwYPF1X1XgtwwJkN.jpg"/> 
+                </div>
+           </div>
+       </div>
+
+
+       <div class="body">
+             <div class="card">
+                
+               <div class="insidecard">
+                   <p><b>Redme EarPhone</b></p>
+                   <button > 25% Off</button>
+                  
+                             <div class="final">
+                                   <div>
+                                     <p style="color:transparent">.</p>
+                                      <p>$449</p>
+                                      <p style="text-decoration: line-through   ;color: gray;" >$699</p>
+                                   </div>
+                    
+                                   <div class="lastbox">
+                                       <img padding  class="img" height="120px";width="70px" src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1598953987.67371928.png?thumb=1&w=220&f=webp&q=85"/>
+                                    </div>
+                                </div>
+                  
+               </div>
+               
+
+            </div>
+
+            <div class="card">
+                
+                <div class="insidecard">
+                    <p><b>Mi EarPhones Basic </br> (with in-built mic)</b></p> 
+                    <button > 33% Off</button>
+                   
+                              <div class="final">
+                                    <div>
+                                      <p style="color:transparent">.</p>
+                                       <p>$399</p>
+                                       <p style="text-decoration: line-through   ;color: gray;" >$449</p>
+                                    </div>
+                     
+                                    <div class="lastbox">
+                                        <img padding  class="img" height="120px";width="70px" src="https://i03.appmifile.com/37_item_in/04/07/2024/631a7c2a846737462f709eca35295bda.png?thumb=1&w=220&f=webp&q=85"/>
+                                     </div>
+                                 </div>
+                   
+                </div>
+                
+ 
+             </div>
+
+
+             
+             <div class="card">
+                
+                <div class="insidecard">
+                    <p><b>Redme Sonic Bass  <br> Earphones 2</b></p>
+                    <button > 45% Off</button>
+                   
+                              <div class="final">
+                                    <div>
+                                      <p style="color:transparent">.</p>
+                                       <p>$1299</p>
+                                       <p style="text-decoration: line-through   ;color: gray;" >$1999</p>
+                                    </div>
+                     
+                                    <div class="lastbox">
+                                        <img padding  class="img" height="120px";width="70px" src="https://i03.appmifile.com/83_item_in/04/07/2024/7c5608a3feed31f769249dc76060efd0.png?thumb=1&w=220&f=webp&q=85"/>
+                                     </div>
+                                 </div>
+                   
+                </div>
+                
+ 
+             </div>
+ 
+             <div class="card">
+                 
+                 <div class="insidecard">
+                     <p><b>Redme Buds 5C</b></p>
+                     <button > 65% Off</button>
+                    
+                               <div class="final">
+                                     <div>
+                                       <p style="color:transparent">.</p>
+                                        <p>$999</p>
+                                        <p style="text-decoration: line-through   ;color: gray;" >$2599</p>
+                                     </div>
+                      
+                                     <div class="lastbox">
+                                         <img padding  class="img" height="120px";width="70px" src="https://i03.appmifile.com/950_item_in/18/07/2024/8947fd143078b3252308e8041b63390b.png?thumb=1&w=220&f=webp&q=85"/>
+                                      </div>
+                                  </div>
+                    
+                 </div>
+                 
+  
+              </div>
+
+
+
+
+            
+
+            
+       </div>
+
+       <div class="box2">
+        <img  width="1000px" src="https://i03.appmifile.com/305_operator_in/16/09/2024/7a490ec96922082e7e31cdca20dd12d3.jpg?thumb=1&w=1680&f=webp&q=85"  />
+
+       </div>
+
+       <div class="body">
+        <div class="card">
+           
+          <div class="insidecard">
+              <p><b>Redme Buds 5 Bundle</b></p>
+              <button > 38% Off</button>
+             
+                        <div class="final">
+                              <div>
+                                <p style="color:transparent">.</p>
+                                 <p>$4499</p>
+                                 <p style="text-decoration: line-through   ;color: gray;" >$7999</p>
+                              </div>
+               
+                              <div class="lastbox">
+                                  <img padding  class="img" height="120px";width="70px" src="https://i03.appmifile.com/479_item_in/28/02/2024/513be7ba7e77cd1e8a6de18bb0546345.jpg?thumb=1&w=220&f=webp&q=85"/>
+                               </div>
+                           </div>
+             
+          </div>
+          
+
+       </div>
+
+       <div class="card">
+           
+           <div class="insidecard">
+               <p><b>Redme Buds 5A</b></p>
+               <button > 50% Off</button>
+              
+                         <div class="final">
+                               <div>
+                                 <p style="color:transparent">.</p>
+                                  <p>$1499</p>
+                                  <p style="text-decoration: line-through   ;color: gray;" >$2999</p>
+                               </div>
+                
+                               <div class="lastbox">
+                                   <img padding  class="img" height="120px";width="70px" src="https://i03.appmifile.com/294_item_in/04/07/2024/5c1f1a5e10f38388cefb0dd1194207e6.png?thumb=1&w=220&f=webp&q=85"/>
+                                </div>
+                            </div>
+              
+           </div>
+           
+
+        </div>
+
+
+        
+        <div class="card">
+           
+           <div class="insidecard">
+            <p><b>Mi Portable Bluetooth </br>Speaker (16W)</b></p>
+            <button > 25% Off</button>
+              
+                         <div class="final">
+                               <div>
+                                 <p style="color:transparent">.</p>
+                                  <p>$1999</p>
+                                  <p style="text-decoration: line-through   ;color: gray;" >$3499</p>
+                               </div>
+                
+                               <div class="lastbox">
+                                   <img padding  class="img" height="120px";width="70px" src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1613844064.93574921.jpg?thumb=1&w=220&f=webp&q=85"/>
+                                </div>
+                            </div>
+              
+           </div>
+           
+
+        </div>
+
+        <div class="card">
+            
+            <div class="insidecard">
+                <p><b>Mi Smart LED Lamp </br>White + Xiaomi Smart...</b></p>
+                <button > 25% Off</button>
+               
+                          <div class="final">
+                                <div>
+                                  <p style="color:transparent">.</p>
+                                   <p>$4499</p>
+                                   <p style="text-decoration: line-through   ;color: gray;" >$10458</p>
+                                </div>
+                 
+                                <div class="lastbox">
+                                    <img padding  class="img" height="120px";width="70px" src="https://i03.appmifile.com/925_item_in/30/06/2023/374811a88fb8668bb4b0c57c92724525.png?thumb=1&w=220&f=webp&q=85"/>
+                                 </div>
+                             </div>
+               
+            </div>
+            
+
+         </div>
+
+
+
+
+       
+
+       
+  </div>     
+
+
+
+    
+</body>
+</html>

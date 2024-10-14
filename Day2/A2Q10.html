@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Coin Switch </title>
+
+    <style>
+     
+     .navbar{
+        Display : flex;
+        justify-content: space-between;
+        
+        border-radius: 5px;
+        height: 60px;
+        margin-right: 30px;
+     }
+       
+     .navmenu{
+        Display : flex;
+        gap:20px;
+       
+         border : solid 1x red
+        
+     }
+     .navmenu > button{
+       background-color: rgb(122, 218, 122);
+      color: white;
+      border: none;
+
+     }
+
+     .navmenu >div{
+        display: flex;
+        align-items: center;
+        gap:2px;
+        
+
+     }
+
+     .bodycontainer{
+         padding-left: 20px;
+         background-color: rgb(212, 212, 212);
+         height: 320px;
+         width: 100%;
+         border-radius: 10px;
+
+     }
+     .bodycontainer > div:nth-child(2) > h1:nth-child(2){
+
+        color:blue;
+     }
+
+     .bodycontainer > div:nth-child(3){
+        font-size: 15px;
+        color: rgb(88, 85, 85);
+        font-family: fantasy;
+     }
+    </style>
+</head>
+<body>
+    
+    <div  class="navbar"> 
+
+            <div class="coinbox" >   
+                  <img heigt="80px" width="160px"  src="data:image/png;base64,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"/>   
+                   </div>
+            
+        <div   class="navmenu" > 
+
+            <div> 
+                <p>Products</p>
+                 <img width="10px" ; height="10px" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7w-BEG31oIIOJQZYXlyWwV2acmzwcnXlkw&s"/>
+            </div>
+                <div style="gap:20px">
+                    <p>Coins </p>
+                    <p> Ventures</p>
+                   <p> Blog</p>
+                </div>
+              
+
+             <div> 
+                <p>Company</p>
+                 <img width="10px" ; height="10px" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7w-BEG31oIIOJQZYXlyWwV2acmzwcnXlkw&s"/>
+            </div>
+             <button style="border-radius: 4px;"> Login To Pro </button>
+        </div>
+    </div>
+  
+
+
+<div class="bodycontainer">
+       <div>
+           <img src = "https://coinswitch.co/_next/static/media/logo.01525825.svg"/>
+       </div>   
+       <div>
+           <h1> Your Inovation </h1>
+           <h1> Our Fuel      </h1>
+       </div>
+       <div>
+           <p> coinSwitch Ventures Invsts in the most promising </p> 
+           <p>Web3 and blockchain proj in India</p> 
+       </div>
+
+       <div>
+           <button>Apply Now</button>
+       </div>
+</div>      
+
+
+
+
+
+   
+</body>
+</html>

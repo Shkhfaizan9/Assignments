@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>table with containers</title>
+
+    <style>
+        table{
+            height:500px;
+            width: 1000px;
+            border-collapse: collapse;
+         
+            
+        }
+        
+        table tr:last-child {
+            background-color: rgb(251, 255, 0);
+        }
+
+        table tr:nth-child(2) ,
+        table tr:nth-child(6) ,
+        table tr:nth-child(10)  {
+            font-size: 30px;
+            font-style: italic;
+            font-weight:bold ;
+        }
+
+        table tr:nth-child(3n+1){
+            color: green;
+            font-weight:bold ;
+        }
+
+        table tr:first-child  {
+            background-color: rgb(183, 185, 185);
+            font-size: 40px;
+            font-style: italic;
+            font-weight:bold ;
+            color: black;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div >
+ <table border="1" >
+    <tr >
+          <td>Product Name</td>
+          <td> Quantity</td>
+          <td>Price</td>
+    </tr>
+    <tr >
+        <td>Product 1</td>
+        <td> 1</td>
+        <td>20</td>
+  </tr>
+  <tr >
+    <td>Product 2</td>
+    <td> 2</td>
+    <td>20</td>
+</tr>
+<tr >
+    <td>Product 3</td>
+    <td> 3</td>
+    <td>20</td>
+</tr>
+<tr >
+<td>Product 4</td>
+<td> 4</td>
+<td>20</td>
+</tr>
+
+<tr >
+    <td>Product 5</td>
+    <td> 5</td>
+    <td>20</td>
+</tr>
+<tr >
+<td>Product 6</td>
+<td> 6</td>
+<td>20</td>
+</tr>
+<tr >
+<td>Product 7</td>
+<td> 7</td>
+<td>20</td>
+</tr>
+<tr >
+<td>Product 8</td>
+<td> 8</td>
+<td>20</td>
+</tr>
+
+<tr >
+    <td>Product 9</td>
+    <td> 9</td>
+    <td>20</td>
+    </tr>
+
+    <tr >
+        <td>Product 10</td>
+        <td> 10</td>
+        <td>20</td>
+        </tr>
+
+        <tr >
+            <td colspan="2">Sum</td>
+            
+            <td >$200</td>
+            </tr>
+
+</table>
+</div>
+
+    
+</body>
+</html>
